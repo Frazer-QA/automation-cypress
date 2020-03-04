@@ -1,0 +1,24 @@
+{
+  "name": "automation-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frazer-QA/automation-cypress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frazer-QA/automation-cypress/issues"
+  },
+  "homepage": "https://github.com/Frazer-QA/automation-cypress#readme",
+  "dependencies": {
+    "cypress": "^4.1.0"
+  }
+}
