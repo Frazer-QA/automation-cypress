@@ -43,11 +43,14 @@ describe("Actions", () => {
         cy.get('#password')
         .type('SuperSecretPassword!')
 
-        cy.get("[class=radius][type=submit]")
+        cy.get('[class=radius][type=submit]')
         .click()
 
         cy.url()
         .should('eq', 'http://the-internet.herokuapp.com/secure')
+
+        cy.get('i').contains(' Logout')  
+
 
     })
 
