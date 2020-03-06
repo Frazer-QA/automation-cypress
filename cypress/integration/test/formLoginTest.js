@@ -1,59 +1,58 @@
 describe("Actions", () => {
     beforeEach(() => {
-      cy.visit("/login") //Specify extra URL folder structure if needed between apostrophes 
+        cy.visit("/login") //Specify extra URL folder structure if needed between apostrophes 
     })
-  
+
     it('Login - Unauthorised', () => {
 
         cy.get('#username')
-        .type('testuser')
+            .type('testuser')
 
         cy.get('#password')
-        .type('testPassword')
+            .type('testPassword')
 
         cy.get("[class=radius][type=submit]")
-        .click()
+            .click()
 
         cy.get("#flash")
-        .should("be.visible")
+            .should("be.visible")
 
     })
 
     it('Login - Authorised', () => {
 
         cy.get('#username')
-        .type('tomsmith')
+            .type('tomsmith')
 
         cy.get('#password')
-        .type('SuperSecretPassword!')
+            .type('SuperSecretPassword!')
 
         cy.get("[class=radius][type=submit]")
-        .click()
+            .click()
 
         cy.url()
-        .should('eq', 'http://the-internet.herokuapp.com/secure')
+            .should('eq', 'http://the-internet.herokuapp.com/secure')
 
     })
 
     it('Login - Authorised - Logout', () => {
 
         cy.get('#username')
-        .type('tomsmith')
+            .type('tomsmith')
 
         cy.get('#password')
-        .type('SuperSecretPassword!')
+            .type('SuperSecretPassword!')
 
         cy.get('[class=radius][type=submit]')
-        .click()
+            .click()
 
         cy.url()
-        .should('eq', 'http://the-internet.herokuapp.com/secure')
+            .should('eq', 'http://the-internet.herokuapp.com/secure')
 
-        cy.get('i').contains(' Logout')  
+        cy.get('i').contains(' Logout')
 
 
     })
 
 })
 
-    
