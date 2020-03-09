@@ -5,8 +5,8 @@ describe("Actions", () => {
 
     it('Login - Unauthorised', () => {
 
-        cy.get('#username')
-            .type('testuser')
+        cy.get('#username') // Command
+            .type('testuser') 
 
         cy.get('#password')
             .type('testPassword')
@@ -15,7 +15,7 @@ describe("Actions", () => {
             .click()
 
         cy.get("#flash")
-            .should("be.visible")
+            .should("be.visible") // Assertion
 
     })
 
